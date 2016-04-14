@@ -6,6 +6,7 @@ var parser   = require("body-parser");
 var app      = express();
 var Minion   = mongoose.model("Minion");
 
+app.use(parser.urlencoded({extended: true}));
 app.set("view engine", "hbs");
 app.engine(".hbs", hbs({
   extname: ".hbs",
@@ -27,6 +28,12 @@ app.get("/:name", function(req, res){
     res.render("minions-show", {
       minion: response
     });
+  });
+});
+
+app.post("/:name", function(req, res){
+  Minion.findOneAndUpdate(req.params, req.body.minion, {new: true}).then(function(response){
+    res.redirect("/" + response.name);
   });
 });
 

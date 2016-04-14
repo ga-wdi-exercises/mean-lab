@@ -1,6 +1,14 @@
 <h2>{{minion.name}}</h2>
 <ul>
-  <p>{{minion.eyes}}</p>
-  <p>{{minion.hair}}</p>
-  <p>{{minion.body}}</p>
+  <p><strong>Number of eyes:</strong> {{minion.eyes}}</p>
+  <p><strong>Hair:</strong> {{minion.hair}}</p>
+  <p><strong>Body:</strong> {{minion.body}}</p>
 </ul>
+
+<form action="/{{minion.name}}" method="POST">
+  <input type="text" name="minion[name]" value="{{minion.name}}"/>
+  <input type="number" name="minion[eyes]" value="{{minion.eyes}}"/>
+  <input type="text" name="minion[hair]" value="{{minion.hair}}"/>
+  <input type="text" name="minion[body]" value="{{minion.body}}"/>
+  <button type="sumbit">Update Minion</button>
+</form>

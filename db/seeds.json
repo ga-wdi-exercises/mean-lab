@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Dave",
+    "eyes": 2,
+    "hair": "Flat, Center-parted",
+    "body": "Slim"
+  },
+  {
+    "name": "Stuart",
+    "eyes": 2,
+    "hair": "Spiky",
+    "body": "Fat"
+  },
+  {
+    "name": "Kevin",
+    "eyes": 1,
+    "hair": "A tiny clump of hair",
+    "body": "Slim"
+  }
+]

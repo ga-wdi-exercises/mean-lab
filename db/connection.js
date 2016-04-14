@@ -9,3 +9,5 @@ var MinionSchema = {
 
 mongoose.model("Minion", MinionSchema);
 mongoose.connect("mongodb://localhost/minions")
+
+module.exports = mongoose;

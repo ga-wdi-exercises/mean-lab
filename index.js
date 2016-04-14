@@ -16,7 +16,9 @@ app.engine(".hbs", hbs({
 
 app.get("/", function(req, res){
   Minion.find().then(function(response){
-    res.render("minions-index");
+    res.render("minions-index", {
+      minions: response
+    });
   })
 });
 

@@ -22,6 +22,14 @@ app.get("/", function(req, res){
   })
 });
 
+app.get("/:name", function(req, res){
+  Minion.findOne().then(function(response){
+    res.render("minions-show", {
+      minion: response
+    });
+  });
+});
+
 app.listen(3001, function(){
   console.log("It's aliiive");
 });

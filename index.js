@@ -44,6 +44,12 @@ app.post("/:name", function(req, res){
   });
 });
 
+app.post("/:name/delete", function(req, res){
+  Minion.findOneAndRemove(req.params).then(function(){
+    res.redirect("/")
+  });
+});
+
 app.listen(3001, function(){
   console.log("It's aliiive");
 });

@@ -6,6 +6,7 @@ var parser   = require("body-parser");
 var app      = express();
 
 app.use(parser.urlencoded({extended: true}));
+app.set("port", process.env.PORT || 3001);
 app.set("view engine", "hbs");
 app.engine(".hbs", hbs({
   extname: ".hbs",
@@ -50,6 +51,6 @@ app.post("/:name/delete", function(req, res){
   });
 });
 
-app.listen(3001, function(){
+app.listen(app.get("port"), function(){
   console.log("It's aliiive");
 });

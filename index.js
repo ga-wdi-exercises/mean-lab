@@ -1,11 +1,16 @@
 var express  = require("express");
-var parser   = require("body-parser");
+var mongoose = require("./db/connection");
 var hbs      = require("express-handlebars");
+var parser   = require("body-parser");
 
 var app      = express();
 
+var Minion   = mongoose.model("Minion");
+
 app.get("/", function(req, res){
-  res.send("Working!");
+  Minion.find().then(function(response){
+    res.json(response);
+  })
 });
 
 app.listen(3001, function(){

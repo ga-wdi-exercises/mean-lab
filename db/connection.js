@@ -8,6 +8,10 @@ var MinionSchema = {
 }
 
 var Minion = mongoose.model("Minion", MinionSchema);
-mongoose.connect("mongodb://localhost/minions")
+if(process.env.NODE_ENV == "production"){
+  mongoose.connect(process.env.MONGODB_URI);
+}else{
+  mongoose.connect("mongodb://localhost/minions");
+}
 
 module.exports = Minion;

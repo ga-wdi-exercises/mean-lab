@@ -7,7 +7,7 @@ var MinionSchema = {
   body: String
 }
 
-mongoose.model("Minion", MinionSchema);
+var Minion = mongoose.model("Minion", MinionSchema);
 mongoose.connect("mongodb://localhost/minions")
 
-module.exports = mongoose;
+module.exports = Minion;

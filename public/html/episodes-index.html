@@ -1,1 +1,9 @@
 <h1>All the Episodes</h1>
+<ul>
+  <p data-ng-repeat"episode in IndexVm.episodes">
+    <h2>{{episode.title}}</h2>
+     <ul>
+       <li data-ng-repeat= "character in episode.characters">{{character.name}}</li>
+   </ul>
+  </p>
+</ul>

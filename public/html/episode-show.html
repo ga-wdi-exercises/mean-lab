@@ -1,1 +1,9 @@
-<h1>This Particular Episode</h1>
+<h2>{{ShowVm.episode.title}}</h2>
+<ul class="characters">
+  <li data-ng-repeat="character in ShowVm.episode.characters">
+    {{character.name}}
+  </li>
+</ul>
+
+<input type="text" data-ng-model="ShowVm.episode.title" />
+<button data-ng-click="ShowVm.update()">Update</button>

@@ -1,9 +1,17 @@
 <h1>All the Episodes</h1>
+<li>
+  <input type="text" data-ng-model="IndexVm.newEpisode.title"/>
+  <button data-ng-click="IndexVm.create()">Add Another Episode</button>
+</li>
 <ul>
-  <p data-ng-repeat"episode in IndexVm.episodes">
-    <h2>{{episode.title}}</h2>
+  <li class="episodes" data-ng-repeat="episode in IndexVm.episodes">
+    <h2><a data-ui-sref="show(episode)">{{episode.title}}</a></h2>
+    <h3>Season {{episode.season}}</h3>
      <ul>
-       <li data-ng-repeat= "character in episode.characters">{{character.name}}</li>
+       <h3>Starring:</h3>
+       <li class="characters" data-ng-repeat= "character in episode.characters">
+         <h3>{{character.name}}</h3>
+       </li>
    </ul>
-  </p>
+ </li>
 </ul>

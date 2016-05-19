@@ -6,7 +6,7 @@ var app     = express();
 var Posts = mongoose.model("Post");
 
 app.get("/", function(req, res){
-  res.render("app-welcome");
+  res.render("layout-main",{layout:false});
 });
 
 app.use("/cool", express.static("public"));

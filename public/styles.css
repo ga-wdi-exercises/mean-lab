@@ -1,9 +1,15 @@
 body {
   /*text-align: right;*/
+  font-family: monospace;
+  text-shadow: 0.5px 0.5px;
+  text-align: center;
+  width: 300px;
+  height: 200px;
   color: grey;
-  background-color: blue;
+  background-color: ;
+  border-radius: 20px;
   border-style: solid;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 900px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border-width: 13px;
 }

@@ -18,6 +18,8 @@
   "homepage": "https://github.com/JoshNezi/mean-lab#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "handlebars": "^4.0.5"
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.5",
+    "mongoose": "^4.4.17"
   }
 }

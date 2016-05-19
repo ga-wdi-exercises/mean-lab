@@ -3,7 +3,12 @@
   <li data-ng-repeat="character in ShowVm.episode.characters">
     {{character.name}}
   </li>
+
+  <li>
+    <input type="text" data-ng-model="ShowVm.character.name"/>
+    <button data-ng-click="ShowVm.createCharacter()">Add Character</button>
+   </li>
 </ul>
 
 <input type="text" data-ng-model="ShowVm.episode.title" />
-<button data-ng-click="ShowVm.update()">Update</button>
+<button data-ng-click="ShowVm.update()">Edit Title</button>

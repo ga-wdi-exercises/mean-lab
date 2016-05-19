@@ -28,6 +28,7 @@ app.get("/api/episodes/:_id", function(req, res){
 });
 
 app.put("/api/episodes/:_id", function(req, res){
+  console.log(req.body)
   Episode.findOneAndUpdate(req.params, req.body, {new: true}).then(function(episode){
     res.json(episode);
   });

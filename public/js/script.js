@@ -50,14 +50,18 @@
     }
   }
 
-  ShowCtrl.$inject = ["Episode", "$stateParams"];
-  function ShowCtrl(Episode, $stateParams){
+  ShowCtrl.$inject = ["Episode", "$stateParams", "$state"];
+  function ShowCtrl(Episode, $stateParams, $state){
     var vm = this;
     vm.episode = Episode.get($stateParams);
     vm.update = function(){
       Episode.update($stateParams, vm.episode, function(response){
-        console.log(response)
+        $state.reload();
       });
+    }
+    vm.createCharacter = function(){
+      vm.episode.characters.push(vm.character);
+      vm.update();
     }
   }
 

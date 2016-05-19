@@ -13,11 +13,11 @@
     $stateProvider
     .state("index", {
       url: "/",
-      template: "This is the index"
+      templateUrl: "/assets/html/episodes-index.html"
     })
     .state("show", {
       url: "/:title",
-      template: "This is the show"
+      templateUrl: "/assets/html/episode-show.html"
     });
   }
 })();

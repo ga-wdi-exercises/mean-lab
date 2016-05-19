@@ -6,7 +6,7 @@ var app     = express();
 var Posts = mongoose.model("Post");
 
 app.get("/", function(req, res){
-  res.send("This is working!");
+  res.render("app-welcome");
 });
 
 app.set("view engine", "hbs");

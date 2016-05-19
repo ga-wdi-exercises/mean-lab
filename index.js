@@ -9,6 +9,7 @@ app.get("/", function(req, res){
   res.render("app-welcome");
 });
 
+app.use("/cool", express.static("public"));
 app.set("view engine", "hbs");
  app.engine(".hbs", hbs({
    extname:      ".hbs",

@@ -1,0 +1,9 @@
+body {
+  /*text-align: right;*/
+  color: grey;
+  background-color: blue;
+  border-style: solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 900px;
+  border-width: 13px;
+}

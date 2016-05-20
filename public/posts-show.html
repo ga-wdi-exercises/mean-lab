@@ -1,1 +1,7 @@
 <h2> This is where the show begins. </h2>
+<h2>{{ShowVM.post}}</h2>
+<ul>
+  <li data-ng-repeat="message in post.messages">
+    {{message.text}}
+  </li>
+</ul>

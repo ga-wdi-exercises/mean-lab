@@ -9,7 +9,7 @@ var Comment    = mongoose.Schema({
 
 var Post  = mongoose.Schema({
   text:     String,
-  messages: [String]
+  messages: [{text: String}]
 });
 //come back to add repost
 

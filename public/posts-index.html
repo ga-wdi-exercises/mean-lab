@@ -1,1 +1,16 @@
-<h2> This is the Index </h2>
+
+
+<ul>
+  <li data-ng-repeat="post in IndexVM.posts">
+    <h2>{{post.text}}</h2>
+    <ul>
+      <li data-ng-repeat="comment in posts.comments">
+        {{comment.text}}
+      </li>
+    </ul>
+  </li>
+  <li>
+    <input type="text" data-ng-model="IndexVM.newPost.text" />
+    <button data-ng-click="IndexVM.create()">Add your InstaPost</button>
+  </li>
+</ul>

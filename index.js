@@ -4,11 +4,7 @@ var parser  = require("body-parser");
 var mongoose= require("./db/connection");
 
 var app     = express();
-var Posts = mongoose.model("Post");
-
-app.get("/", function(req, res){
-  res.render("main",{layout:false});
-});
+var Post = mongoose.model("Post");
 
 app.use(parser.json({extended: true}));
 app.use("/cool", express.static("public"));
@@ -20,12 +16,16 @@ app.set("view engine", "hbs");
    defaultLayout:"main"
  }));
 
+ app.get("/", function(req, res){
+   res.render("main",{layout:false});
+ });
 
 app.get("/api/posts", function(req, res){
-  res.json(req.body);
+  Post.find({}).then(function(posts){
+    console.log(posts)
+    res.json(posts);
   });
-
-
+});
 
 app.listen(3001, function(){
   console.log("I'm working!");

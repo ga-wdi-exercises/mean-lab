@@ -2,12 +2,7 @@
 
 <ul>
   <li data-ng-repeat="post in IndexVM.posts">
-    <h2>{{post.text}}</h2>
-    <ul>
-      <li data-ng-repeat="comment in posts.comments">
-        {{comment.text}}
-      </li>
-    </ul>
+    <h2><a data-ui-sref="show(post)">{{post.text}}</a></h2>
   </li>
   <li>
     <input type="text" data-ng-model="IndexVM.newPost.text" />

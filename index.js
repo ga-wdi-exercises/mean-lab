@@ -40,6 +40,12 @@ app.post("/api/episodes", function(req, res){
   });
 });
 
+app.delete("/api/episodes/:_id", function(req, res){
+  Episode.findOneAndRemove(req.params).then(function(){
+    res.json({success: true});
+  });
+});
+
 app.get("/*", function(req, res){
   res.render("main", {layout: false});
 });

@@ -12,8 +12,8 @@
   .controller("Show", ShowCtrl)
 
 
-  Router.$inject = ["$stateProvider", "$locationProvider"];
-  function Router($stateProvider, $locationProvider){
+  Router.$inject = ["$stateProvider", "$locationProvider", "$urlRouterProvider"];
+  function Router($stateProvider, $locationProvider, $urlRouterProvider){
     $locationProvider.html5Mode(true);
     $stateProvider
     .state("index", {
@@ -28,6 +28,7 @@
       controller: "Show",
       controllerAs: "ShowVm"
     });
+    $urlRouterProvider.otherwise("/");
   }
 
   EpisodeFactory.$inject = ["$resource"];
@@ -63,6 +64,11 @@
       vm.episode.characters.push(vm.character);
       vm.update();
     }
-  }
 
+    vm.destroy = function(){
+      Episode.remove($stateParams, function(){
+        $state.go("index");
+      });
+    }
+  }
 })();

@@ -1,0 +1,35 @@
+{
+  "name": "odot",
+  "version": "1.0.0",
+  "description": "MEAN LAB",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jortiz31/mean-lab.git"
+  },
+
+  "author": "jortiz",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.0"
+  },
+  "homepage": "https://github.com/jortiz31/mean-lab#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.9"
+  }
+}

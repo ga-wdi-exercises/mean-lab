@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="odot">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Starter Template</title>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <script src="/scripts/app.js"></script>
+  </head>
+  <body>
+
+    <ul class="sub-nav menu" role="navigation" title="Filter Menu List">
+      <li>Odot</li>
+    </ul>
+
+
+    <div class="row" ng-controller="TasksIndexController as tasksIndexCtrl">
+      <div class="large-8 large-centered medium-8 medium-centered small-10 small-centered">
+        <label>
+          Task:
+          <input type="text" placeholder="New task name" ng-model="tasksIndexCtrl.newTask.name">
+        </label>
+        <label>
+          Due Date:
+          <input type="text" placeholder="Due Date" ng-model="tasksIndexCtrl.newTask.dueDate">
+        </label>
+      </div>
+    </div>
+
+    <div ng-repeat="task in tasksIndexCtrl.tasks" class="row">
+        <table class="hover">
+          <tr>
+            <td><p>Task name: {{task.name}}</p></td>
+            <td><p>Due Date: {{task.dueDate}}</p></td>
+            <td><button type="button" class="success small expanded button"><i class="fi-pencil"></i></button></td>
+            <td><button type="button" class="alert small expanded button"><i class="fi-trash"></i></button></td>
+          </tr>
+        </table>
+      </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -70,7 +70,7 @@ The app you make today probably will not be the magnum opus that defines you as 
 
 ## Lab Submission
 
-Each group please submit a pull request to this issue to this repo by 9AM tomorrow morning with...
+Each group please submit a pull request to this issue to this repo **by 9AM** tomorrow morning with...
 * The names of the people in your group.
 * A link to your lab repo.
 * A link to your deployed application.

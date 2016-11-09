@@ -1,5 +1,5 @@
 {{#each recipes as |recipe i|}}
-  <p>{{recipe.name}}</p>
+  <a href="/{{recipe.name}}">{{recipe.name}}</a>
 <!-- {{recipe.ingredients}} -->
   <ul>
     {{#each recipe.ingredients as |ingredient i|}}

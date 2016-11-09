@@ -23,7 +23,21 @@ app.get("/", (req, res) => {
     })
   })
 })
+//recipe show page
+app.get("/:name", (req, res) => {
+  Recipe.findOne({name: req.params.name}).then(recipe => {
+    res.render("show",{
+      recipe: recipe,
+    })
+  })
+})
+app.post("/:name/delete", (req, res) => {
+  Recipe.findOneAndRemove({name: req.params.name}).then( _ => {
+    res.redirect("/")
+  })
+})
 
+//create views
 app.post("/", (req,res) => {
     Recipe.create(req.body.recipe).then(recipe =>{
       res.redirect("/")

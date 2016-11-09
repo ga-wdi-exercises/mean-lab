@@ -1,0 +1,15 @@
+<p>
+  {{recipe.name}}
+</p>
+
+<ul>
+  {{#each recipe.ingredients as |ingredient i|}}
+    <li>{{ingredient.quantity}} {{ingredient.unit}} - {{ingredient.name}}</li>
+  {{/each}}
+</ul>
+
+<form action="/{{recipe.name}}/delete" method="post">
+  <button type="submit">Delete {{recipe.name}}</button>
+</form>
+
+<a href="/">Back</a>

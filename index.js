@@ -8,6 +8,7 @@ var bodyParser    = require("body-parser")
 
 //setting port & listening
 app.set("port", process.env.PORT || 4001)
+app.use(bodyParser.urlencoded({extended:true}))
 app.listen(app.get("port"), function() {
   console.log("Consequences...")
 })
@@ -21,6 +22,13 @@ app.get("/", (req, res) => {
       recipes: recipes
     })
   })
+})
+
+app.post("/", (req,res) => {
+    Recipe.create(req.body.recipe).then(recipe =>{
+      res.redirect("/")
+    })
+  // res.send(req.body.name)
 })
 
 

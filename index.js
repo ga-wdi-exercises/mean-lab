@@ -4,6 +4,7 @@ var models        = require("./db/models")
 var Recipe        = mongoose.model("Recipe")
 var Ingredient    = mongoose.model("Ingredient")
 var app           = express()
+var bodyParser    = require("body-parser")
 
 //setting port & listening
 app.set("port", process.env.PORT || 4001)

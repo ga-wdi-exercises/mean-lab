@@ -1,12 +1,12 @@
 angular
-  .module("upvoter", [
-    "ui.router",
-    "ngResource"
-  ])
+.module("upvoter", [
+  "ui.router",
+  "ngResource"
+])
 
 .config([
   "$stateProvider",
-    RouterFunction
+  RouterFunction
 ])
 
 .factory("PostFactory", [
@@ -15,15 +15,15 @@ angular
 ])
 
 .controller("PostIndexController",[
-    "PostFactory",
-    "$state",
-    PostIndexControllerFunction
+  "PostFactory",
+  "$state",
+  PostIndexControllerFunction
 ])
 
 .controller("PostShowController",[
-    "PostFactory",
-    "$stateParams",
-    PostShowControllerFunction
+  "PostFactory",
+  "$stateParams",
+  PostShowControllerFunction
 ])
 
 function RouterFunction($stateProvider){
@@ -48,18 +48,21 @@ function PostFactoryFunction($resource){
 
 function PostIndexControllerFunction (PostFactory, $state){
   var indexVm = this;
-    this.posts = PostFactory.query()
-    this.newPost = new PostFactory()
-    this.create = function(){
-      this.newPost.$save()
-    }
+  this.posts = PostFactory.query()
+  this.newPost = new PostFactory()
+  this.create = function(){
+    this.newPost.$save()
+  }
 }
 
 function PostShowControllerFunction(PostFactory, $stateParams, $state){
-  var showVm = this
   this.post = PostFactory.get({_id: $stateParams.id})
+  this.update = function() {
+    this.post.$update({_id: $stateParams.id});
 
-  // showVm.update = funtion(){
-  //   // ??????
-  // }
+  }
+  this.destroy = function() {
+    this.post.$delete({_id: $stateParams.id});
+  }
+
 }

@@ -15,6 +15,9 @@ app.listen(app.get("port"), function() {
 //set handlebars for views
 app.set("view engine", "hbs")
 
+//set pubic folder
+app.use(express.static("public"));
+
 //get views
 app.get("/", (req, res) => {
   Recipe.find({}).then( recipes => {
@@ -34,6 +37,12 @@ app.get("/:name", (req, res) => {
 app.post("/:name/delete", (req, res) => {
   Recipe.findOneAndRemove({name: req.params.name}).then( _ => {
     res.redirect("/")
+  })
+})
+
+app.post("/:name", (req, res) => {
+  Recipe.findOneAndUpdate({name: req.params.name}, req.body.recipe, {new:true}).then(recipe => {
+    res.redirect("/" + recipe.name)
   })
 })
 

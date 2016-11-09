@@ -1,0 +1,14 @@
+<h2>Whatever Posts</h2>
+{{vm.post.title}}
+{{vm.post.body}}
+{{vm.post.upvote}}
+<img data-ng-src="{{vm.ng-view.image_url}}"/>
+
+<form data-ng-submit="showVm.update()">
+  <input data-ng-model=showVm.post.title />
+  <input data-ng-model=showVm.post.body />
+  <input data-ng-model=showVm.post.image_url />
+  <button type="Submit">Update</button>
+  <button data-ui-sref="postIndex" data-ng-click="showVm.delete()">Delete</button>
+
+</form>

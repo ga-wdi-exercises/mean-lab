@@ -1,16 +1,15 @@
 angular
-  .module('upvoter', [
+  .module("upvoter", [
     "ui.router",
-    "upvoters"
-  ]);
+    "ngResource"
+  ])
 
-.config({
+.config([
   "$stateProvider",
-  "$localProvider",
     RouterFunction
-})
+])
 
-.factory("PostFactory"), [
+.factory("PostFactory", [
   "$resource",
   PostFactoryFunction
 ])
@@ -21,22 +20,46 @@ angular
     PostIndexControllerFunction
 ])
 
-// .controller("PostShowController",[
-//     "PostFactory",
-//     "$state",
-//     PostIndexControllerFunction
-// ])
+.controller("PostShowController",[
+    "PostFactory",
+    "$stateParams",
+    PostShowControllerFunction
+])
 
-funtion RouterFunction($stateProvider){
+function RouterFunction($stateProvider){
   $stateProvider
-  .state(postIndex{
+  .state("postIndex",{
     url: "/posts",
     templateUrl: "js/ng-views/index.html",
     controller: "PostIndexController",
-    controllerAs: "vm"
+    controllerAs: "indexVm"
+  })
+  .state("postShow",{
+    url: "/posts",
+    templateUrl: "js/ng-views/show.html",
+    controller: "PostShowController",
+    controllerAs: "showVm"
   })
 }
 
 function PostFactoryFunction($resource){
-  return $resource ("http://localhost:2000/posts/:id")
+  return $resource ("http://localhost:3001/posts/:id")
+}
+
+function PostIndexControllerFunction (PostFactory, $state){
+  var indexVm = this;
+    this.posts = PostFactory.query()
+    this.newPost = new PostFactory()
+    this.create = function(){
+      this.newPost.$save()
+    }
+}
+
+function PostShowControllerFunction(PostFactory, $stateParams, $state){
+  var showVm = this
+  this.post = PostFactory.get({_id: $stateParams.id})
+
+  // showVm.update = funtion(){
+  //   // ??????
+  // }
 }

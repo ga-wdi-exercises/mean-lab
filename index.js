@@ -1,20 +1,25 @@
 var express       = require("express")
-// var hbs           = require("express-handlebars")
-
+var mongoose      = require("./db/connection")
+var models        = require("./db/models")
+var Recipe        = mongoose.model("Recipe")
+var Ingredient    = mongoose.model("Ingredient")
 var app           = express()
 
 //setting port & listening
 app.set("port", process.env.PORT || 4001)
-
 app.listen(app.get("port"), function() {
   console.log("Consequences...")
 })
-
+//set handlebars for views
 app.set("view engine", "hbs")
 
 //get views
 app.get("/", (req, res) => {
-  res.send("hello world!")
+  Recipe.find({}).then( recipes => {
+    res.render("index", {
+      recipes: recipes
+    })
+  })
 })
 
 

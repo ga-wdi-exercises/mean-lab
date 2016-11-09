@@ -1,0 +1,9 @@
+{{#each recipes as |recipe i|}}
+  <p>{{recipe.name}}</p>
+<!-- {{recipe.ingredients}} -->
+  <ul>
+    {{#each recipe.ingredients as |ingredient i|}}
+      <li>{{ingredient.name}}</li>
+    {{/each}}
+  </ul>
+{{/each}}

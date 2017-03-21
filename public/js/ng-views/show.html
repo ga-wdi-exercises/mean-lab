@@ -1,0 +1,15 @@
+<div ng-if="!vm.entry">
+  <h2>Error</h2>
+</div>
+
+<div ng-if="vm.entry">
+  <h2>{{vm.entry.title}}</h2>
+  <p>{{vm.entry.body}}</p>
+
+  <div class="edit-entry">
+    <input type="text" ng-model="vm.entry.title" placeholder="Title" />
+    <input type="text" ng-model="vm.entry.body" placeholder="Body" />
+    <button data-ng-click="vm.update()">Edit</button>
+    <button data-ng-click="vm.destroy()">Delete</button>
+  </div>
+</div>

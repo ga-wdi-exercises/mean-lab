@@ -1,0 +1,21 @@
+<h2>All Notebook Entries</h2>
+
+<div class="entries">
+
+  <p>There are {{vm.notebookentries.length}} entries: </p>
+
+  <br>
+
+  <h3 data-ng-repeat="entry in vm.notebookentries">
+     <a data-ui-sref="show({title: entry.title})">{{entry.title}}</a>
+     <p>{{entry.body}}</p>
+   </h3>
+
+
+</div>
+
+<form ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newEntry.title" placeholder="Title" />
+  <input type="text" ng-model="vm.newEntry.body" placeholder="Body" />
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Dave",
+    "eyes": 2,
+    "hair": "Flat, Center-parted",
+    "body": "Slim",
+    "about": [
+      {
+        "likes": "Bananas"
+      },
+      {
+        "dislikes": "Jam"
+      }
+    ]
+  },
+  {
+    "name": "Stuart",
+    "eyes": 2,
+    "hair": "Spiky",
+    "body": "Fat",
+    "about": [
+      {
+        "likes": "Fart Gun"
+      },
+      {
+        "dislikes": "Bullies"
+      }
+    ]
+  },
+  {
+    "name": "Kevin",
+    "eyes": 1,
+    "hair": "A tiny clump of hair",
+    "body": "Slim",
+    "about": [
+      {
+        "likes": "Ice Cream"
+      },
+      {
+        "dislikes": "Waiting"
+      }
+    ]
+  }
+]

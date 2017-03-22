@@ -1,0 +1,15 @@
+<h2>Minion Army:</h2>
+
+<ul>
+  {{#each minions as |minion|}}
+    <h3><a href="/{{minion.name}}">{{minion.name}}</a></h3>
+  {{/each}}
+</ul>
+
+<form action="/" method="POST">
+  <input type="text" name="minion[name]" placeholder="Minion Name"/>
+  <input type="number" name="minion[eyes]" placeholder="Number or eyes"/>
+  <input type="text" name="minion[hair]" placeholder="Hair"/>
+  <input type="text" name="minion[body]" placeholder="Body"/>
+  <button type="submit">Create Minion</button>
+</form>

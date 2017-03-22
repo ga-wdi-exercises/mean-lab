@@ -1,0 +1,28 @@
+<h2>Posts Index</h2>
+<form data-ng-submit="indexVm.create()">
+ <input placeholder="Title" data-ng-model="indexVm.newPost.title" />
+ <input placeholder="Body" data-ng-model="indexVm.newPost.body" />
+ <input placeholder="Image Url" data-ng-model="indexVm.newPost.image_url" />
+ <button type="submit">Create</button>
+</form>
+
+<div data-ng-repeat="post in indexVm.posts">
+ <a data-ui-sref="postShow({_id: $index})">
+   <img data-ng-src="{{post.image_url}}">
+   <p>{{post.title}}</p>
+   <p>{{post.body}}</p>
+ </a>
+
+
+
+
+
+
+
+
+
+<!-- <h1>hello this is the index!</h1>
+
+<div data-ng-repeat="post in vm.posts">
+<p><a data-ui-sref="postShow({_id: post.id})">{{post.title}}</a></p>
+</div> -->

@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Winter is Coming",
+    "season": 1,
+    "characters":
+      [{"name": "Ned Stark"}, {"name": "Robert Baratheon"}, {"name": "Daenerys Targareyan"}, {"name": "Jaime Lannister"}]
+  },
+  {
+    "title": "The North Remembers",
+    "season": 2,
+    "characters": [{"name": "Robb Stark"}, {"name": "Theon Greyjoy"}, {"name": "Arya Stark"}, {"name": "Ser Davos Seaworth"}]
+  },
+  {
+    "title": "Valar Dohaeris",
+    "season": 3,
+    "characters": [{"name": "White Fucking Walkers"}, {"name": "Tyrion Lannister"}, {"name": "Daenerys Targareyan"}, {"name": "Margaery Tyrell"}]
+  },
+  {
+    "title": "Two Swords",
+    "season": 4,
+    "characters": [{"name": "Tywin Lannister"}, {"name": "Jaime Lannister"}, {"name": "Prince Oberyn"}, {"name": "Ygritte"}, {"name": "Jon Snow"}]
+  },
+  {
+    "title": "The Wars to Come",
+    "season": 5,
+    "characters": [{"name": "Cersei Lannister"}, {"name": "Sansa Stark"}, {"name": "Roose Bolton"}, {"name": "Lancel Lannister"}]
+  },
+  {
+    "title": "The Red Woman",
+    "season": 6,
+    "characters": [{"name": "John Snow's Corpse"}, {"name": "Ramsey Bolton"}, {"name": "Melisandre"}, {"name": "Jaqen H'ghar"}]
+  }
+]

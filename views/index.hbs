@@ -1,0 +1,20 @@
+{{#each recipes as |recipe i|}}
+  <a href="/{{recipe.name}}">{{recipe.name}}</a>
+<!-- {{recipe.ingredients}} -->
+  <ul>
+    {{#each recipe.ingredients as |ingredient i|}}
+      <li>{{ingredient.name}}</li>
+    {{/each}}
+  </ul>
+{{/each}}
+
+
+<form action="/" method="post">
+  <input type="text" name="recipe[name]" placeholder="Name">
+
+  <input type="text" name="recipe[ingredients][quantity]" placeholder="quantiy">
+  <input type="text" name="recipe[ingredients][unit]" placeholder="unit">
+  <input type="text" name="recipe[ingredients][name]" placeholder="ingredient name">
+
+  <input type="submit">
+</form>

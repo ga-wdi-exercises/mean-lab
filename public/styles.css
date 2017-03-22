@@ -1,0 +1,17 @@
+body {
+  /*text-align: right;*/
+  font-family: monospace;
+  text-shadow: 0.5px 0.5px;
+  text-align: center;
+  width: 300px;
+  height: 600px;
+  color: grey;
+  background-color: ;
+  border-radius: 20px;
+  border-style: double;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-width: 13px;
+  opacity: 0.7;
+  filter: alpha(opacity=10);
+}

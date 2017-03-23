@@ -11,7 +11,7 @@ var IngredientSchema = new mongoose.Schema(
 var RecipeSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
-    instructions: { type: String, required: true },
+    instructions: String,
     ingredients: [{
       ingredient: {type : ObjectId, ref : 'Ingredient'},
       amount: String

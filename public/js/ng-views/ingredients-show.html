@@ -1,0 +1,9 @@
+<h2>{{vm.ingredient.name}}</h2>
+
+<div class='ingredients'>
+  <ul>
+    <li data-ng-repeat="recipe in vm.recipes">
+      <a data-ui-sref="recipes-show({id: recipe._id})">{{recipe.name}}</a>
+    </li>
+  </ul>
+</div>

@@ -16,7 +16,7 @@ Your app should have CRUD functionality for at least one model.
 
 ### Bonus I
 
-Add a second model to your application, which is embedded under the first.
+Add a second model to your application, which is embedded under the first.np
 
 ### Bonus II
 

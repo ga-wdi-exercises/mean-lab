@@ -1,0 +1,29 @@
+{
+  "name": "musicstar",
+  "version": "1.0.0",
+  "description": "music app",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect": "^3.6.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgmusic24/mean-lab.git"
+  },
+  "keywords": [
+    "musician"
+  ],
+  "author": "luisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lgmusic24/mean-lab/issues"
+  },
+  "homepage": "https://github.com/lgmusic24/mean-lab#readme"
+}

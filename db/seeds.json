@@ -1,0 +1,63 @@
+{
+	"undefined": "localhost/LOCAL_DB_NAME",
+	"dev": "localhost/DEV_DB_NAME",
+	"prod": "localhost/PROD_DB_NAME"
+}
+
+  {
+    "artist": "Jack and Eliza",
+    "instrument": "Voice/Guitar",
+		"album":"Gentle Warnings",
+		"photo_url":"http://res.cloudinary.com/nylon/image/upload/w_640,f_auto,q_auto:best,cs_srgb,dpr_auto/featured_images/attachments/000/013/573/J_E_option_1__2.jpeg"
+  },
+  {
+    "artist": "Billy Joel",
+    "instrument": "Voice/Piano",
+		"album":"Piano Man",
+		"photo_url":"http://image.iheart.com/images/rovi/1080/0001/334/MI0001334899.jpg"
+  },
+  {
+    "artist": "Porcupine Tree",
+    "instrument": "Voice/Instrument",
+		"album": "In Absentia",
+		"photo_url": "http://www.prog-sphere.com/wp-content/uploads/2014/07/Porcupine-Tree.jpg"
+  }
+
+  {
+    "artist": "Rihanna",
+    "instrument": "Voice",
+		"album":"LOUD",
+		"photo_url":"https://www.google.com/search?q=billy+joel&source=lnms&tbm=isch&sa=X&ved=0ahUKEwja88Spq4TUAhUjiFQKHfV7ArMQ_AUIDCgD&biw=994&bih=689#tbm=isch&q=rihanna+album&imgrc=IyXVMFa5VjH3nM:"
+  }
+
+  {
+    "artist": "Panic!At the Disco",
+    "instrument": "Voice/Guitar",
+		"album": "Too Weird to Live, Too Rare to Die",
+		"photo_url": "http://www.billboard.com/files/styles/article_main_image/public/stylus/1040659-panic-at-the-disco-jennifer-tzar-617-409.jpg"
+  }
+
+  {
+    "artist": "David Garrett",
+    "instrument": "Violin",
+		"album":"Rock Symphonies",
+		"photo_url":"https://s-media-cache-ak0.pinimg.com/originals/97/92/98/979298e9143e4567db5af87359f64cd6.png"
+  }
+
+  {
+    "artist": "Lindsey Stirling",
+    "instrument": "Violin",
+		"album":"Brave Enough",
+		"photo_url":"https://i.ytimg.com/vi/aftW_5WzWM0/maxresdefault.jpg"
+  }
+
+  {
+    "artist": "The Chainsmokers",
+    "instrument": "Voice",
+		"album":"Closer",
+		"photo_url":"https://www.google.com/search?q=the+chainsmokers&source=lnms&tbm=isch&sa=X&ved=0ahUKEwin97bDsITUAhXsx1QKHXUvBg8Q_AUICygC&biw=994&bih=689#imgrc=2jwSPd-x8xDloM:"
+
+  }
+
+
+]

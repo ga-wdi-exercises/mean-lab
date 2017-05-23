@@ -1,0 +1,28 @@
+{
+  "name": "mycoolgarbage",
+  "version": "1.0.0",
+  "description": "this is just a bunch of my trash",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hello garbage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ga-wdi-exercises/mean-lab.git"
+  },
+  "keywords": [
+    "garbage"
+  ],
+  "author": "omar chaudhry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ga-wdi-exercises/mean-lab/issues"
+  },
+  "homepage": "https://github.com/ga-wdi-exercises/mean-lab#readme"
+}

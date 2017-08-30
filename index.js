@@ -9,7 +9,7 @@ const app = express()
 app.set('port', process.env.PORT || 3001)
 app.use('/assets', express.static('public'))
 app.use('/node_modules', express.static('node_modules'))
-app.use(parser.json({ extended: true}))
+app.use(parser.json())
 
 app.get('/characters', (req, res) => {
   Character.find({}, null, {sort: {name: 1}}).then((characters) => {

@@ -1,6 +1,6 @@
 const Character = require('./schema.js')
 
-const getHeroes = require('./db_utils.js').getHeroes
+const getHeroes = require('../utils.js').getHeroes
 
 Character.remove({})
   .then(() => {

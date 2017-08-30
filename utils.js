@@ -6,6 +6,14 @@ const marvelPUB = process.env.MARVEL_PUB_KEY
 const marvelAPI = process.env.MARVEL_API_KEY
 const hash = md5(ts + marvelAPI + marvelPUB)
 
+function searchHero (name) {
+  return axios
+    .get(`http://gateway.marvel.com/v1/public/characters?name=${name}&ts=${ts}&apikey=${marvelPUB}&hash=${hash}`)
+    .then((res) => {
+      return res.data.data.results
+    })
+}
+
 
 function getHeroes (offset = 0, characterData = []) {
   return axios
@@ -27,5 +35,6 @@ function getHeroes (offset = 0, characterData = []) {
 }
 
 module.exports = {
-  getHeroes
+  getHeroes,
+  searchHero
 }

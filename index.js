@@ -2,6 +2,7 @@ const express = require('express')
 const parser = require('body-parser')
 
 const Character = require('./db/schema.js')
+const searchHero = require('./utils.js').searchHero
 
 const app = express()
 
@@ -21,6 +22,13 @@ app.post('/characters', (req, res) => {
     res.status(200).json(character)
   })
 })
+
+// app.post('/characters/search', (req, res) => {
+//   searchHero(req.body.searchName)
+//     .then((res) => {
+//       console.log(res)
+//     })
+// })
 
 app.get('/characters/:id', (req, res) => {
   Character.findOne({ _id: req.params.id }).then((character) => {
